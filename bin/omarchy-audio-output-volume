@@ -51,7 +51,7 @@ if [[ $action == "mute-toggle" ]]; then
   printf '%s\n' "$now" >"$debounce_file"
 
   pactl set-sink-mute "$sink" toggle
-elif [[ $action =~ ^([+-=])([0-9]+)$ ]]; then
+elif [[ $action =~ ^([-+=])([0-9]+)$ ]]; then
   direction="${BASH_REMATCH[1]}"
   step="${BASH_REMATCH[2]}"
 

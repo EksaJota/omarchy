@@ -68,7 +68,7 @@ elif [[ $action =~ ^([-+=])([0-9]+)$ ]]; then
     next=$((current - step))
     ((next >= 0)) || next=0
   else
-    next=$step
+    next=10#$step
     ((next >= 0)) || next=0
     ((next <= 100)) || next=100
   fi
